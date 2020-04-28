@@ -1,0 +1,697 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xyz.zarni.voting.BoyFragment">
+
+    
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:fitsSystemWindows="true">
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.daimajia.slider.library.Indicators.PagerIndicator
+                    android:id="@+id/custom_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/slider"
+                    android:gravity="center" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="3dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/p1"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_margin="5dp"
+                                    style="@style/MaterialAnimations"
+                                    android:transitionName="@string/blue_name"
+                                    android:layout_centerHorizontal="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    app:civ_border_width="2dp"
+                                    app:civ_border_color="@color/colorAccent"/>
+
+
+                                <LinearLayout
+                                    android:id="@+id/detail"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@+id/p1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <me.myatminsoe.mdetect.MMTextView
+                                        android:id="@+id/pmh"
+                                        android:text="pmh"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_below="@+id/detail"
+                                    android:weightSum="2"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <Button
+                                        android:id="@+id/v1"
+                                        android:text="View"
+                                        android:elevation="2dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/view_btn"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_margin="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35sp" />
+
+                                    <Button
+                                        android:id="@+id/vo1"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/vote_btn"
+                                        android:text="Vote"
+                                        android:textColor="#fff"
+                                        android:elevation="2dp"
+                                        android:layout_margin="3dp"
+                                        android:textAllCaps="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="3dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/p2"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_margin="5dp"
+                                    style="@style/MaterialAnimations"
+                                    android:transitionName="@string/blue_name"
+                                    android:layout_centerHorizontal="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    app:civ_border_width="2dp"
+                                    app:civ_border_color="@color/colorAccent"/>
+
+
+                                <LinearLayout
+                                    android:id="@+id/detail2"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@+id/p2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <me.myatminsoe.mdetect.MMTextView
+                                        android:id="@+id/aks"
+                                        android:text="aks"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_below="@+id/detail2"
+                                    android:weightSum="2"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <Button
+                                        android:id="@+id/v2"
+                                        android:text="View"
+                                        android:elevation="2dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/view_btn"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_margin="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35sp" />
+
+                                    <Button
+                                        android:id="@+id/vo2"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/vote_btn"
+                                        android:text="Vote"
+                                        android:textColor="#fff"
+                                        android:elevation="2dp"
+                                        android:layout_margin="3dp"
+                                        android:textAllCaps="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="3dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/p3"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_margin="5dp"
+                                    style="@style/MaterialAnimations"
+                                    android:transitionName="@string/blue_name"
+                                    android:layout_centerHorizontal="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    app:civ_border_width="2dp"
+                                    app:civ_border_color="@color/colorAccent"/>
+
+
+                                <LinearLayout
+                                    android:id="@+id/detail3"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@+id/p3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <me.myatminsoe.mdetect.MMTextView
+                                        android:id="@+id/swkk"
+                                        android:text="swkk"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_below="@+id/detail3"
+                                    android:weightSum="2"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <Button
+                                        android:id="@+id/v3"
+                                        android:text="View"
+                                        android:elevation="2dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/view_btn"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_margin="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35sp" />
+
+                                    <Button
+                                        android:id="@+id/vo3"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/vote_btn"
+                                        android:text="Vote"
+                                        android:textColor="#fff"
+                                        android:elevation="2dp"
+                                        android:layout_margin="3dp"
+                                        android:textAllCaps="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="3dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/p4"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_margin="5dp"
+                                    style="@style/MaterialAnimations"
+                                    android:transitionName="@string/blue_name"
+                                    android:layout_centerHorizontal="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    app:civ_border_width="2dp"
+                                    app:civ_border_color="@color/colorAccent"/>
+
+
+                                <LinearLayout
+                                    android:id="@+id/detail4"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@+id/p4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <me.myatminsoe.mdetect.MMTextView
+                                        android:id="@+id/hhha"
+                                        android:text="hhha"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_below="@+id/detail4"
+                                    android:weightSum="2"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <Button
+                                        android:id="@+id/v4"
+                                        android:text="View"
+                                        android:elevation="2dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/view_btn"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_margin="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35sp" />
+
+                                    <Button
+                                        android:id="@+id/vo4"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/vote_btn"
+                                        android:text="Vote"
+                                        android:textColor="#fff"
+                                        android:elevation="2dp"
+                                        android:layout_margin="3dp"
+                                        android:textAllCaps="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="3dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/p5"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_margin="5dp"
+                                    style="@style/MaterialAnimations"
+                                    android:transitionName="@string/blue_name"
+                                    android:layout_centerHorizontal="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    app:civ_border_width="2dp"
+                                    app:civ_border_color="@color/colorAccent"/>
+
+
+                                <LinearLayout
+                                    android:id="@+id/detail5"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@+id/p5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <me.myatminsoe.mdetect.MMTextView
+                                        android:id="@+id/tpa"
+                                        android:text="tpa"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_below="@+id/detail5"
+                                    android:weightSum="2"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <Button
+                                        android:id="@+id/v5"
+                                        android:text="View"
+                                        android:elevation="2dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/view_btn"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_margin="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35sp" />
+
+                                    <Button
+                                        android:id="@+id/vo5"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/vote_btn"
+                                        android:text="Vote"
+                                        android:textColor="#fff"
+                                        android:elevation="2dp"
+                                        android:layout_margin="3dp"
+                                        android:textAllCaps="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="3dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/p6"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_margin="5dp"
+                                    style="@style/MaterialAnimations"
+                                    android:transitionName="@string/blue_name"
+                                    android:layout_centerHorizontal="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    app:civ_border_width="2dp"
+                                    app:civ_border_color="@color/colorAccent"/>
+
+
+                                <LinearLayout
+                                    android:id="@+id/detail6"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@+id/p6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <me.myatminsoe.mdetect.MMTextView
+                                        android:id="@+id/nmtm"
+                                        android:text="nmtm"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_below="@+id/detail6"
+                                    android:weightSum="2"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <Button
+                                        android:id="@+id/v6"
+                                        android:text="View"
+                                        android:elevation="2dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/view_btn"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_margin="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35sp" />
+
+                                    <Button
+                                        android:id="@+id/vo6"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/vote_btn"
+                                        android:text="Vote"
+                                        android:textColor="#fff"
+                                        android:elevation="2dp"
+                                        android:layout_margin="3dp"
+                                        android:textAllCaps="false"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_height="wrap_content">
+
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="3dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/p7"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_margin="5dp"
+                                    style="@style/MaterialAnimations"
+                                    android:transitionName="@string/blue_name"
+                                    android:layout_centerHorizontal="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    app:civ_border_width="2dp"
+                                    app:civ_border_color="@color/colorAccent"/>
+
+
+                                <LinearLayout
+                                    android:id="@+id/detail7"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="vertical"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@+id/p7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <me.myatminsoe.mdetect.MMTextView
+                                        android:id="@+id/kzh"
+                                        android:text="kzh"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/colorPrimary"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detail7"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="60dp"
+                                    android:layout_marginRight="60dp"
+                                    android:weightSum="2">
+
+                                    <Button
+                                        android:id="@+id/v7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35sp"
+                                        android:layout_margin="3dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/view_btn"
+                                        android:elevation="2dp"
+                                        android:text="View"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/colorPrimary" />
+
+                                    <Button
+                                        android:id="@+id/vo7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:layout_margin="3dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/vote_btn"
+                                        android:elevation="2dp"
+                                        android:text="Vote"
+                                        android:textAllCaps="false"
+                                        android:textColor="#fff" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

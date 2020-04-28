@@ -1,0 +1,687 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xyz.zarni.voting.BoyFragment">
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:fitsSystemWindows="true">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/custom_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slider"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/p1"
+                                style="@style/MaterialAnimations"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_launcher_background"
+                                android:transitionName="@string/blue_name"
+                                app:civ_border_color="@color/colorAccent"
+                                app:civ_border_width="2dp" />
+
+
+                            <LinearLayout
+                                android:id="@+id/detail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/p1"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <me.myatminsoe.mdetect.MMTextView
+                                    android:id="@+id/hhw"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="hhw"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/detail"
+                                android:layout_marginBottom="5dp"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/v1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35sp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/view_btn"
+                                    android:elevation="2dp"
+                                    android:text="View"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <Button
+                                    android:id="@+id/vo1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/vote_btn"
+                                    android:elevation="2dp"
+                                    android:text="Vote"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/p2"
+                                style="@style/MaterialAnimations"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_launcher_background"
+                                android:transitionName="@string/blue_name"
+                                app:civ_border_color="@color/colorAccent"
+                                app:civ_border_width="2dp" />
+
+
+                            <LinearLayout
+                                android:id="@+id/detail2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/p2"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <me.myatminsoe.mdetect.MMTextView
+                                    android:id="@+id/mms"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="mms"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/detail2"
+                                android:layout_marginBottom="5dp"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/v2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35sp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/view_btn"
+                                    android:elevation="2dp"
+                                    android:text="View"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <Button
+                                    android:id="@+id/vo2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/vote_btn"
+                                    android:elevation="2dp"
+                                    android:text="Vote"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/p3"
+                                style="@style/MaterialAnimations"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_launcher_background"
+                                android:transitionName="@string/blue_name"
+                                app:civ_border_color="@color/colorAccent"
+                                app:civ_border_width="2dp" />
+
+
+                            <LinearLayout
+                                android:id="@+id/detail3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/p3"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <me.myatminsoe.mdetect.MMTextView
+                                    android:id="@+id/nzt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="nzt"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/detail3"
+                                android:layout_marginBottom="5dp"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/v3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35sp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/view_btn"
+                                    android:elevation="2dp"
+                                    android:text="View"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <Button
+                                    android:id="@+id/vo3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/vote_btn"
+                                    android:elevation="2dp"
+                                    android:text="Vote"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/p4"
+                                style="@style/MaterialAnimations"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_launcher_background"
+                                android:transitionName="@string/blue_name"
+                                app:civ_border_color="@color/colorAccent"
+                                app:civ_border_width="2dp" />
+
+
+                            <LinearLayout
+                                android:id="@+id/detail4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/p4"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <me.myatminsoe.mdetect.MMTextView
+                                    android:id="@+id/tzlp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="tzlp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/detail4"
+                                android:layout_marginBottom="5dp"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/v4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35sp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/view_btn"
+                                    android:elevation="2dp"
+                                    android:text="View"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <Button
+                                    android:id="@+id/vo4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/vote_btn"
+                                    android:elevation="2dp"
+                                    android:text="Vote"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/p5"
+                                style="@style/MaterialAnimations"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_launcher_background"
+                                android:transitionName="@string/blue_name"
+                                app:civ_border_color="@color/colorAccent"
+                                app:civ_border_width="2dp" />
+
+
+                            <LinearLayout
+                                android:id="@+id/detail5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/p5"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <me.myatminsoe.mdetect.MMTextView
+                                    android:id="@+id/mcm"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="mcm"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/detail5"
+                                android:layout_marginBottom="5dp"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/v5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35sp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/view_btn"
+                                    android:elevation="2dp"
+                                    android:text="View"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <Button
+                                    android:id="@+id/vo5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/vote_btn"
+                                    android:elevation="2dp"
+                                    android:text="Vote"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/p6"
+                                style="@style/MaterialAnimations"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_launcher_background"
+                                android:transitionName="@string/blue_name"
+                                app:civ_border_color="@color/colorAccent"
+                                app:civ_border_width="2dp" />
+
+
+                            <LinearLayout
+                                android:id="@+id/detail6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/p6"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <me.myatminsoe.mdetect.MMTextView
+                                    android:id="@+id/zpp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="zpp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/detail6"
+                                android:layout_marginBottom="5dp"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/v6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35sp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/view_btn"
+                                    android:elevation="2dp"
+                                    android:text="View"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <Button
+                                    android:id="@+id/vo6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/vote_btn"
+                                    android:elevation="2dp"
+                                    android:text="Vote"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/p7"
+                                style="@style/MaterialAnimations"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_launcher_background"
+                                android:transitionName="@string/blue_name"
+                                app:civ_border_color="@color/colorAccent"
+                                app:civ_border_width="2dp" />
+
+
+                            <LinearLayout
+                                android:id="@+id/detail7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/p7"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <me.myatminsoe.mdetect.MMTextView
+                                    android:id="@+id/mas"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="mas"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/detail7"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="60dp"
+                                android:layout_marginRight="60dp"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/v7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35sp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/view_btn"
+                                    android:elevation="2dp"
+                                    android:text="View"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorPrimary" />
+
+                                <Button
+                                    android:id="@+id/vo7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/vote_btn"
+                                    android:elevation="2dp"
+                                    android:text="Vote"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

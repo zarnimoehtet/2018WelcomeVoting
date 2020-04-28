@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+        <tab
+            id="@+id/tab_home"
+            icon="@drawable/ic_king"
+            title="Kings"
+             />
+
+    <tab
+        id="@+id/tab_new"
+        icon="@drawable/ic_queen"
+        title = "Queens"
+        />
+
+        <tab
+            id="@+id/tab_fav"
+            icon="@drawable/ic_gift_box"
+            title = "Lucky Draw"
+           />
+
+    <tab
+        id="@+id/tab_set"
+        icon="@drawable/ic_controls"
+        title = "Settings"
+        />
+
+    </tabs>

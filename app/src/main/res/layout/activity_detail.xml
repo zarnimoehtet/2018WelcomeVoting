@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:frisson = "http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context="com.xyz.zarni.voting.DetailActivity">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/heager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.intrusoft.library.FrissonView
+                android:id="@+id/wave_head"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                frisson:alphaValue="100"
+                frisson:tintColor="@color/colorPrimaryDark"
+                frisson:tideCount="3"
+                frisson:gradientType="linear"
+                frisson:autoTint="true"
+                frisson:tideHeight="40dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                style="@style/MaterialAnimations"
+                android:transitionName="@string/blue_name"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                app:civ_border_width="2dp"
+                android:elevation="5dp"
+                app:civ_border_color="@color/icons"/>
+
+            <me.myatminsoe.mdetect.MMTextView
+                android:id="@+id/name"
+                android:layout_below="@+id/profile"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:textColor="@color/icons"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/section"
+                android:layout_below="@+id/name"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textColor="@color/icons"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/contact"
+        android:layout_below="@+id/heager"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/facebook"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:text="Facebook"
+            android:textColor="#fff"
+            android:padding="5dp"
+            android:textAllCaps="false"
+            android:elevation="5dp"
+            android:background="@drawable/vote_btn"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/phone"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:text="Phone"
+            android:elevation="5dp"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:padding="5dp"
+            android:background="@drawable/vote_btn" />
+    </RelativeLayout>
+
+       <HorizontalScrollView
+           android:id="@+id/footer"
+           android:layout_below="@+id/contact"
+           android:layout_width="match_parent"
+          android:scrollbars="none"
+           android:layout_height="450dp">
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:scrollbars="none"
+               android:layout_marginBottom="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <ImageView
+                   android:id="@+id/imageViewOne"
+                   android:scaleType="centerCrop"
+                   android:layout_margin="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="450dp" />
+
+               <ImageView
+                   android:id="@+id/imageViewTwo"
+                   android:scaleType="centerCrop"
+                   android:layout_margin="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="450dp" />
+
+               <ImageView
+                   android:id="@+id/imageViewThree"
+                   android:scaleType="centerCrop"
+                   android:layout_margin="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="450dp" />
+           </LinearLayout>
+       </HorizontalScrollView>
+    </RelativeLayout>
+
+
+
+
+</ScrollView>
